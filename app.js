@@ -6,14 +6,14 @@ const port = 3000
 
 app.use(
     '/static',
-    express.static(path.join(__dirname, 'views')),
+    express.static(path.join(__dirname, 'public')),
   );
+
+  app.set('view engine', 'pug')
 
   const generateTitle = () =>{
     return 'Nodejs'
 }
-
-app.set('view engine', 'hbs')
 
 app.get('/', (req, res) => {
 
