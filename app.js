@@ -1,13 +1,17 @@
 const express = require('express')
-const { hostname } = require('os')
-
-const port = 3000
-
-const generateTitle = () =>{
-    return 'Nodejs'
-}
+const path = require('path');
 
 const app = express()
+const port = 3000
+
+app.use(
+    '/static',
+    express.static(path.join(__dirname, 'public')),
+  );
+
+  const generateTitle = () =>{
+    return 'Nodejs'
+}
 
 app.set('view engine', 'hbs')
 
