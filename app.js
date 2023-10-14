@@ -9,10 +9,6 @@ const generateTitle = () =>{
 
 const app = express()
 
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-app.set('views', __dirname);
-
 app.set('view engine', 'hbs')
 
 app.get('/', (req, res) => {
