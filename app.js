@@ -13,10 +13,7 @@ app.get('/', (req, res) => {
 
 const title = generateTitle()
 
-    res.render('index',{
-        pageTittle: title,
-        pagebody: 'hi node'
-    })
+    res.render('index')
 })
 
 app.get('/kontakt', (req, res) => {
