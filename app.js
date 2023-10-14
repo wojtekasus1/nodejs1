@@ -8,8 +8,9 @@ app.use(
     '/static',
     express.static(path.join(__dirname, 'public')),
   );
+app.use(express.json())
 
-  app.set('view engine', 'pug')
+  app.set('view engine', 'hbs')
 
   const generateTitle = () =>{
     return 'Nodejs'
